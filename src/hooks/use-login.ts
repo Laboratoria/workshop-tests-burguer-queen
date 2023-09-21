@@ -26,6 +26,7 @@ export const useLogin = () => {
       .catch((error) => {
         if (options?.onError) options.onError(error);
         setRequestStatus("error");
+        console.error(error)
       });
   };
 

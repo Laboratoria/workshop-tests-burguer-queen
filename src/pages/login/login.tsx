@@ -46,6 +46,7 @@ export const Login: FC = () => {
         <div>
           <label htmlFor="email">Email</label>
           <input
+            data-testid="login_form_email_input"
             id="email"
             type="email"
             name="email"
@@ -56,6 +57,7 @@ export const Login: FC = () => {
         <div>
           <label htmlFor="password">Password</label>
           <input
+            data-testid="login_form_password_input"
             id="password"
             type="password"
             name="password"
@@ -63,7 +65,11 @@ export const Login: FC = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" disabled={loginStatus === "loading"}>
+        <button
+          data-testid="login_form_submit_button"
+          type="submit"
+          disabled={loginStatus === "loading"}
+        >
           Login
         </button>
       </form>

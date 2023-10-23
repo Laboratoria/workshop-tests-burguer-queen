@@ -13,7 +13,7 @@ export const Home: FC = () => {
     navigate("/login");
   };
   return (
-    <div className={styles["home"]}>
+    <div data-testid="home_page" className={styles["home"]}>
       Home
       <img src={viteLogo} alt="Vite Logo" />
       <button onClick={handleLogoutClick}>Logout</button>

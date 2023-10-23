@@ -17,8 +17,10 @@ export const useLogin = () => {
 
   const login: LoginRequest = ({ payload, options }) => {
     setRequestStatus("loading");
+    console.log("usuaria: señor backend no tendrá un tokensito que le sobre?")
     loginService(payload.email, payload.password)
       .then((res) => {
+        console.log("backend: tome su token")
         createSession(res.accessToken, res.user);
         if (options?.onSuccess) options.onSuccess(res);
         setRequestStatus("success");

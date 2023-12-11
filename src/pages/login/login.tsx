@@ -11,7 +11,6 @@ type LoginFormFields = {
 };
 
 export const Login: FC = () => {
-  // console.log("Render Login")
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState<LoginFormFields>({
@@ -34,7 +33,6 @@ export const Login: FC = () => {
       payload: formData,
       options: {
         onSuccess: () => {
-          console.log("yendo al home con mi nuevo token")
           navigate("/");
         },
       },

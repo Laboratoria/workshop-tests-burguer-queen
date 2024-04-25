@@ -202,3 +202,7 @@ moduleNameMapper: {
 ```
 
 Este cambio hará que no solo los archivos con extensión `.css` sean mockeados con nuestro `file-mock.csj` sino que ahora también serán mockeados los archivos con las extensiones `.png`, `.jpg` y `.jpeg`
+
+## Paso 5 - Script npm run test
+
+Agregar en el archivo `package.json` un script con nombre `test` para ejecutar `jest`
